@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Book a free RoboGardener demonstration in Templestowe, Melbourne.">
+  <title>Book a Free Demo | RoboGardener</title>
+  <link rel="canonical" href="https://www.robogardener.com.au/demo.html">
+  <meta name="theme-color" content="#075a36">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20261001-1">
+  <link rel="stylesheet" href="demo.css?v=20261001-1">
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
+</head>
+<body class="demo-page">
+<header class="demo-topbar">
+  <a href="/" class="demo-brand"><img src="assets/robogardener-logo.jpg" alt="RoboGardener"></a>
+  <a href="/" class="demo-back">← Back to website</a>
+</header>
+<main class="demo-main">
+  <section class="demo-intro">
+    <span class="demo-kicker">FREE ROBOTIC MOWING DEMONSTRATION</span>
+    <h1>Book Your Free Demo</h1>
+    <p>See RoboGardener technology in action and talk with our team about the right mowing approach for your lawn.</p>
+    <div class="demo-location">
+      <span>DEMO LOCATION</span>
+      <strong>Welcome to 3 Read St, Templestowe VIC</strong>
+      <small>Your service address below should be the property where you would like RoboGardener to assess your lawn.</small>
+    </div>
+  </section>
+  <section class="demo-card">
+    <form id="demoForm" novalidate>
+      <input type="hidden" name="preferred_language" value="English">
+      <input type="hidden" name="service_required" value="Free Demo Booking">
+      <div class="demo-hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+      <div class="demo-grid two">
+        <label for="demoName">Full Name *<input id="demoName" name="full_name" required maxlength="150" autocomplete="name" placeholder="Your name"></label>
+        <label for="demoPhone">Phone *<input id="demoPhone" name="phone" type="tel" required maxlength="50" autocomplete="tel" placeholder="04xx xxx xxx"></label>
+      </div>
+      <label for="demoEmail">Email *<input id="demoEmail" name="email" type="email" required maxlength="254" autocomplete="email" placeholder="you@example.com"></label>
+      <div class="demo-grid address">
+        <label for="demoAddress">Service Address *<input id="demoAddress" name="service_address" required maxlength="300" autocomplete="street-address" placeholder="Street address, suburb, VIC"></label>
+        <label for="demoPostcode">Postcode *<input id="demoPostcode" name="postcode" required inputmode="numeric" maxlength="4" pattern="[0-9]{4}" autocomplete="postal-code" placeholder="3109"></label>
+      </div>
+      <div class="demo-grid two">
+        <label for="demoArea">Lawn Area *
+          <select id="demoArea" name="lawn_area" required>
+            <option value="">Select lawn area</option><option value="0-100">Under 100 m²</option><option value="100-250">100–250 m²</option><option value="250-500">250–500 m²</option><option value="500-1000">500–1,000 m²</option><option value="1000-2000">1,000–2,000 m²</option><option value="2000+">2,000 m²+</option><option value="unknown">Not sure</option>
+          </select>
+        </label>
+        <label for="demoHeight">Current Grass Height *
+          <select id="demoHeight" name="grass_height" required>
+            <option value="">Select current grass height</option><option value="under5">Under 5 cm</option><option value="5-10">5–10 cm</option><option value="10-20">10–20 cm</option><option value="20-40">20–40 cm</option><option value="40plus">40 cm+ / clearly overgrown</option><option value="unknown">Not sure</option>
+          </select>
+        </label>
+      </div>
+      <div class="demo-grid two">
+        <label for="demoDate">Preferred Demo Date *<input id="demoDate" type="date" required></label>
+        <label for="demoTime">Preferred Demo Time *<select id="demoTime" required><option value="">Select a time</option></select></label>
+      </div>
+      <input id="demoNotes" type="hidden" name="additional_information">
+      <div class="demo-turnstile"><div id="demoTurnstile"></div><p id="demoSecurity" aria-live="polite"></p></div>
+      <button id="demoSubmit" class="demo-submit" type="submit">BOOK FREE DEMO <span>→</span></button>
+      <p class="demo-privacy">🔒 Your details are used only to arrange your RoboGardener demo and respond to your enquiry.</p>
+      <div id="demoMessage" class="demo-message" role="status" aria-live="polite"></div>
+    </form>
+    <div id="demoSuccess" class="demo-success" hidden>
+      <div>✓</div><h2>Your demo request has been received</h2>
+      <p>We’ll review your preferred date and time and contact you to confirm the appointment.</p>
+      <p id="demoRef"></p><a href="/" class="demo-submit">BACK TO ROBOGARDENER</a>
+    </div>
+  </section>
+</main>
+<script src="demo.js?v=20261001-1"></script>
+</body>
+</html>
