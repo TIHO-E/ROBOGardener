@@ -16,23 +16,24 @@
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
 </head>
 <body class="demo-page">
+<div class="demo-lang-switch" aria-label="Language switcher"><button type="button" class="demo-lang-btn active" data-lang="en">EN</button><button type="button" class="demo-lang-btn" data-lang="zh">中文</button></div>
 <header class="demo-topbar">
   <a href="/" class="demo-brand"><img src="assets/robogardener-logo.jpg" alt="RoboGardener"></a>
-  <a href="/" class="demo-back">← Back to website</a>
+  <a href="/" class="demo-back">← <span data-demo-i18n="back">Back to website</span></a>
 </header>
 <main class="demo-main">
   <section class="demo-intro">
-    <span class="demo-kicker">FREE ROBOTIC MOWING DEMONSTRATION</span>
-    <h1>Book Your Free Demo</h1>
-    <p>See RoboGardener technology in action and talk with our team about the right mowing approach for your lawn.</p>
+    <span class="demo-kicker"><span data-demo-i18n="kicker">FREE ROBOTIC MOWING DEMONSTRATION</span></span>
+    <h1 data-demo-i18n="title">Book Your Free Demo</h1>
+    <p data-demo-i18n="intro">See RoboGardener technology in action and talk with our team about the right mowing approach for your lawn.</p>
     <div class="demo-location">
-      <span>DEMO LOCATION</span>
-      <strong>Welcome to 3 Read St,<br>Templestowe VIC</strong>
+      <span data-demo-i18n="locationLabel">DEMO LOCATION</span>
+      <strong data-demo-i18n-html="locationTitle">Welcome to 3 Read St,<br>Templestowe VIC</strong>
       <a class="demo-map" href="https://www.google.com/maps/search/?api=1&query=3%20Read%20St%2C%20Templestowe%20VIC" target="_blank" rel="noopener noreferrer" aria-label="Open 3 Read St, Templestowe VIC in Google Maps">
         <span class="demo-map-pin" aria-hidden="true">⌖</span>
-        <span class="demo-map-copy"><b>3 Read St, Templestowe VIC</b><small>Open in Google Maps →</small></span>
+        <span class="demo-map-copy"><b>3 Read St, Templestowe VIC</b><small data-demo-i18n="map">Open in Google Maps →</small></span>
       </a>
-      <small class="demo-location-note">Your service address below should be the property where you would like RoboGardener to assess your lawn.</small>
+      <small class="demo-location-note" data-demo-i18n="locationNote">Your service address below should be the property where you would like RoboGardener to assess your lawn.</small>
     </div>
   </section>
   <section class="demo-card">
@@ -41,43 +42,43 @@
       <input type="hidden" name="service_required" value="Free Demo Booking">
       <div class="demo-hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
       <div class="demo-grid two">
-        <label for="demoName">Full Name *<input id="demoName" name="full_name" required maxlength="150" autocomplete="name" placeholder="Your name"></label>
-        <label for="demoPhone">Phone *<input id="demoPhone" name="phone" type="tel" required maxlength="50" autocomplete="tel" placeholder="04xx xxx xxx"></label>
+        <label for="demoName"><span data-demo-i18n="name">Full Name *</span><input id="demoName" name="full_name" required maxlength="150" autocomplete="name" placeholder="Your name"></label>
+        <label for="demoPhone"><span data-demo-i18n="phone">Phone *</span><input id="demoPhone" name="phone" type="tel" required maxlength="50" autocomplete="tel" placeholder="04xx xxx xxx"></label>
       </div>
-      <label for="demoEmail">Email *<input id="demoEmail" name="email" type="email" required maxlength="254" autocomplete="email" placeholder="you@example.com"></label>
+      <label for="demoEmail"><span data-demo-i18n="email">Email *</span><input id="demoEmail" name="email" type="email" required maxlength="254" autocomplete="email" placeholder="you@example.com"></label>
       <div class="demo-grid address">
-        <label for="demoAddress">Service Address *<input id="demoAddress" name="service_address" required maxlength="300" autocomplete="street-address" placeholder="Street address, suburb, VIC"></label>
-        <label for="demoPostcode">Postcode *<input id="demoPostcode" name="postcode" required inputmode="numeric" maxlength="4" pattern="[0-9]{4}" autocomplete="postal-code" placeholder="3109"></label>
+        <label for="demoAddress"><span data-demo-i18n="address">Service Address *</span><input id="demoAddress" name="service_address" required maxlength="300" autocomplete="street-address" placeholder="Street address, suburb, VIC"></label>
+        <label for="demoPostcode"><span data-demo-i18n="postcode">Postcode *</span><input id="demoPostcode" name="postcode" required inputmode="numeric" maxlength="4" pattern="[0-9]{4}" autocomplete="postal-code" placeholder="3109"></label>
       </div>
       <div class="demo-grid two">
-        <label for="demoArea">Lawn Area *
+        <label for="demoArea"><span data-demo-i18n="area">Lawn Area *</span>
           <select id="demoArea" name="lawn_area" required>
             <option value="">Select lawn area</option><option value="0-100">Under 100 m²</option><option value="100-250">100–250 m²</option><option value="250-500">250–500 m²</option><option value="500-1000">500–1,000 m²</option><option value="1000-2000">1,000–2,000 m²</option><option value="2000+">2,000 m²+</option><option value="unknown">Not sure</option>
           </select>
         </label>
-        <label for="demoHeight">Current Grass Height *
+        <label for="demoHeight"><span data-demo-i18n="height">Current Grass Height *</span>
           <select id="demoHeight" name="grass_height" required>
             <option value="">Select current grass height</option><option value="under5">Under 5 cm</option><option value="5-10">5–10 cm</option><option value="10-20">10–20 cm</option><option value="20-40">20–40 cm</option><option value="40plus">40 cm+ / clearly overgrown</option><option value="unknown">Not sure</option>
           </select>
         </label>
       </div>
       <div class="demo-grid two">
-        <label for="demoDate">Preferred Demo Date *<input id="demoDate" type="date" required></label>
-        <label for="demoTime">Preferred Demo Time *<select id="demoTime" required><option value="">Select a time</option></select></label>
+        <label for="demoDate"><span data-demo-i18n="date">Preferred Demo Date *</span><input id="demoDate" type="date" required></label>
+        <label for="demoTime"><span data-demo-i18n="time">Preferred Demo Time *</span><select id="demoTime" required><option value="">Select a time</option></select></label>
       </div>
       <input id="demoNotes" type="hidden" name="additional_information">
       <div class="demo-turnstile"><div id="demoTurnstile"></div><p id="demoSecurity" aria-live="polite"></p></div>
-      <button id="demoSubmit" class="demo-submit" type="submit">BOOK FREE DEMO <span>→</span></button>
-      <p class="demo-privacy">🔒 Your details are used only to arrange your RoboGardener demo and respond to your enquiry.</p>
+      <button id="demoSubmit" class="demo-submit" type="submit"><span data-demo-i18n="submit">BOOK FREE DEMO</span> <span>→</span></button>
+      <p class="demo-privacy" data-demo-i18n="privacy">🔒 Your details are used only to arrange your RoboGardener demo and respond to your enquiry.</p>
       <div id="demoMessage" class="demo-message" role="status" aria-live="polite"></div>
     </form>
     <div id="demoSuccess" class="demo-success" hidden>
-      <div>✓</div><h2>Your demo request has been received</h2>
-      <p>We’ll review your preferred date and time and contact you to confirm the appointment.</p>
-      <p id="demoRef"></p><a href="/" class="demo-submit">BACK TO ROBOGARDENER</a>
+      <div>✓</div><h2 data-demo-i18n="successTitle">Your demo request has been received</h2>
+      <p data-demo-i18n="successText">We’ll review your preferred date and time and contact you to confirm the appointment.</p>
+      <p id="demoRef"></p><a href="/" class="demo-submit" data-demo-i18n="backHome">BACK TO ROBOGARDENER</a>
     </div>
   </section>
 </main>
-<script src="demo.js?v=20261001-1"></script>
+<script src="demo.js?v=20261001-2"></script>
 </body>
 </html>
