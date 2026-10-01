@@ -1,1 +1,49 @@
 *{box-sizing:border-box}.demo-page{margin:0;background:#f4f7f2;color:#123e29;font-family:Arial,sans-serif}.demo-topbar{min-height:78px;padding:12px 6vw;background:#fff;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #dfe8df}.demo-brand img{width:190px;height:auto;display:block}.demo-back{color:#164f32;font-weight:700;text-decoration:none}.demo-main{min-height:calc(100vh - 78px);padding:64px 6vw 80px;background:#075a36;display:grid;grid-template-columns:minmax(300px,.8fr) minmax(560px,1.2fr);gap:64px;align-items:start}.demo-intro{color:#fff;padding-top:28px}.demo-kicker{font-size:12px;font-weight:800;letter-spacing:.16em;color:#c9e89e}.demo-intro h1{font-family:Georgia,serif;font-size:clamp(48px,5vw,72px);line-height:1;margin:14px 0 20px;font-weight:400}.demo-intro>p{max-width:560px;font-size:17px;line-height:1.7;color:#e6f0e9}.demo-location{margin-top:38px;padding:24px;border:1px solid rgba(255,255,255,.2);border-radius:16px;background:rgba(255,255,255,.08)}.demo-location span{display:block;font-size:10px;font-weight:800;letter-spacing:.15em;color:#c9e89e}.demo-location strong{display:block;font-family:Georgia,serif;font-size:28px;margin:8px 0 10px}.demo-location small{display:block;line-height:1.6;color:#dce9df}.demo-card{background:#fff;border-radius:20px;padding:38px;box-shadow:0 28px 70px rgba(0,0,0,.18)}.demo-card label{display:block;font-size:12px;font-weight:800;margin:0 0 15px}.demo-card input,.demo-card select{width:100%;min-height:48px;margin-top:7px;border:1px solid #cbd9cd;border-radius:8px;padding:10px 12px;background:#fff;color:#163e2a;font:inherit}.demo-card input:focus,.demo-card select:focus{outline:3px solid rgba(22,122,69,.15);border-color:#16834b}.demo-grid{display:grid;gap:16px}.demo-grid.two{grid-template-columns:1fr 1fr}.demo-grid.address{grid-template-columns:1.6fr .55fr}.demo-hp{position:absolute!important;left:-10000px!important;width:1px;height:1px;overflow:hidden}.demo-turnstile{margin:10px 0 18px}.demo-submit{width:100%;min-height:52px;border:0;border-radius:999px;background:#ff8418;color:#fff;font-weight:800;font-size:14px;letter-spacing:.03em;display:flex;align-items:center;justify-content:center;gap:14px;text-decoration:none;cursor:pointer}.demo-submit:disabled{opacity:.6;cursor:not-allowed}.demo-privacy{text-align:center;color:#728078;font-size:11px}.demo-message{margin-top:14px;padding:12px 14px;border-radius:8px;font-size:13px}.demo-message:empty{display:none}.demo-message.error{background:#fff0ed;color:#9c2d23;border:1px solid #f0b7af}.demo-success{text-align:center;padding:48px 10px}.demo-success h2{font-family:Georgia,serif;font-size:38px;font-weight:400}.demo-success p{line-height:1.7;color:#637269}.demo-success .demo-submit{margin-top:24px}@media(max-width:900px){.demo-main{grid-template-columns:1fr;gap:30px;padding-top:38px}.demo-intro{padding-top:0}.demo-card{padding:30px}.demo-grid.two,.demo-grid.address{grid-template-columns:1fr}}@media(max-width:520px){.demo-topbar{padding:10px 18px}.demo-brand img{width:150px}.demo-back{font-size:12px}.demo-main{padding:30px 18px 50px}.demo-intro h1{font-size:46px}.demo-location strong{font-size:24px}.demo-card{padding:24px 18px;border-radius:16px}}.demo-map{margin:18px 0 14px;padding:14px 16px;border-radius:12px;background:#fff;color:#123e29;text-decoration:none;display:flex;align-items:center;gap:12px;transition:transform .18s ease,box-shadow .18s ease}.demo-map:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(0,0,0,.12)}.demo-map-pin{width:38px;height:38px;flex:0 0 38px;border-radius:50%;display:grid;place-items:center;background:#e8f3e8;color:#0a6039;font-size:22px}.demo-map-copy{display:block!important;letter-spacing:0!important;color:#123e29!important}.demo-map-copy b{display:block;font-size:14px}.demo-map-copy small{display:block;margin-top:3px;color:#4e6f5c;font-size:11px}.demo-location-note{display:block;line-height:1.6;color:#dce9df}
+/* ===== Demo responsive hardening: tablet + mobile only ===== */
+@media(max-width:900px){
+  .demo-page{width:100%;overflow-x:hidden}
+  .demo-topbar{width:100%;gap:16px}
+  .demo-main{width:100%;min-width:0;padding-left:max(24px,env(safe-area-inset-left));padding-right:max(24px,env(safe-area-inset-right))}
+  .demo-intro,.demo-card,.demo-grid,.demo-card form{min-width:0;max-width:100%}
+  .demo-intro>p{max-width:680px}
+  .demo-location{max-width:680px}
+  .demo-card input,.demo-card select{max-width:100%;min-width:0}
+  .demo-turnstile{max-width:100%;overflow:hidden}
+}
+@media(max-width:600px){
+  .demo-topbar{min-height:66px;padding:9px max(16px,env(safe-area-inset-right)) 9px max(16px,env(safe-area-inset-left));gap:10px}
+  .demo-brand{min-width:0;display:block}
+  .demo-brand img{width:145px;max-width:42vw}
+  .demo-back{flex:0 0 auto;font-size:11px;white-space:nowrap}
+  .demo-main{min-height:calc(100vh - 66px);padding-top:30px;padding-bottom:48px;gap:24px}
+  .demo-kicker{font-size:10px;line-height:1.45;letter-spacing:.12em}
+  .demo-intro h1{font-size:clamp(40px,12vw,52px);line-height:.98;margin:12px 0 16px}
+  .demo-intro>p{font-size:15px;line-height:1.6;margin-bottom:0}
+  .demo-location{margin-top:24px;padding:19px 17px;border-radius:14px}
+  .demo-location strong{font-size:clamp(22px,7vw,27px);line-height:1.08}
+  .demo-map{padding:12px;margin:15px 0 12px;gap:10px}
+  .demo-map-pin{width:34px;height:34px;flex-basis:34px}
+  .demo-map-copy{min-width:0}
+  .demo-map-copy b{font-size:12px;line-height:1.35;overflow-wrap:anywhere}
+  .demo-map-copy small{font-size:10px}
+  .demo-location-note{font-size:12px}
+  .demo-card{width:100%;padding:22px 16px;border-radius:16px}
+  .demo-grid.two,.demo-grid.address{grid-template-columns:minmax(0,1fr)}
+  .demo-grid{gap:0}
+  .demo-card label{font-size:12px;margin-bottom:14px}
+  .demo-card input,.demo-card select{min-height:50px;font-size:16px;padding:11px 12px}
+  .demo-turnstile{margin:8px 0 17px}
+  #demoTurnstile{transform-origin:left top}
+  .demo-submit{min-height:52px;font-size:13px;padding:0 14px}
+  .demo-privacy{font-size:10px;line-height:1.45;padding:0 4px}
+  .demo-success{padding:30px 4px}
+  .demo-success h2{font-size:32px;line-height:1.08}
+}
+@media(max-width:350px){
+  .demo-topbar{align-items:center}
+  .demo-brand img{width:128px}
+  .demo-back{font-size:10px}
+  .demo-main{padding-left:12px;padding-right:12px}
+  .demo-card{padding-left:12px;padding-right:12px}
+  #demoTurnstile{transform:scale(.88);margin-bottom:-8px}
+}
