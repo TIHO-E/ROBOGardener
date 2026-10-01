@@ -1,5 +1,5 @@
 (function(){
-  const FUNCTION_URL='https://fzuqhjxzczlyinilstkd.supabase.co/functions/v1/submit-enquiry';
+  const FUNCTION_URL='https://fzuqhjxzclzlynilstkd.supabase.co/functions/v1/submit-enquiry';
   // Public Cloudflare Turnstile site key. Safe to expose in frontend code.
   const TURNSTILE_SITE_KEY='0x4AAAAAAEu7h40kgxNIk3hf';
   const MAX_FILE_SIZE=10*1024*1024;
