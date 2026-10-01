@@ -48,3 +48,4 @@
   #demoTurnstile{transform:scale(.88);margin-bottom:-8px}
 }
 .demo-lang-switch{position:fixed;z-index:30;top:18px;left:50%;transform:translateX(-50%);display:flex;padding:3px;border:1px solid #d5dfd6;border-radius:999px;background:#fff}.demo-lang-btn{border:0;background:transparent;color:#607166;border-radius:999px;padding:8px 13px;font-weight:800;cursor:pointer}.demo-lang-btn.active{background:#075a36;color:#fff}@media(max-width:600px){.demo-lang-switch{position:absolute;top:72px;left:auto;right:16px;transform:none}.demo-main{padding-top:72px}}
+.demo-success-icon{width:58px;height:58px;margin:0 auto 22px;border-radius:50%;display:grid;place-items:center;background:#16834b;color:#fff;font-size:32px;font-weight:800;line-height:1;box-shadow:0 8px 22px rgba(22,131,75,.18)}
