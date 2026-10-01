@@ -502,3 +502,20 @@ img{height:auto}
   background-color:#075a36;
   background-image:none;
 }
+
+/* ===== Free demo header CTA ===== */
+.demo-header-btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:46px;padding:0 22px;border-radius:8px;
+  background:#ff8418;color:#fff;text-decoration:none;
+  font-size:14px;font-weight:800;letter-spacing:.03em;white-space:nowrap;
+  transition:transform .18s ease,filter .18s ease;
+}
+.demo-header-btn:hover{transform:translateY(-1px);filter:brightness(.97)}
+.demo-header-btn:focus-visible{outline:3px solid rgba(255,132,24,.3);outline-offset:3px}
+@media(max-width:1180px){
+  .demo-header-btn{order:2;min-height:42px;padding:0 15px;font-size:12px}
+}
+@media(max-width:720px){
+  .demo-header-btn{margin-left:auto;margin-right:8px;min-height:40px;padding:0 12px;font-size:11px}
+}
