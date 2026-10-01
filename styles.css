@@ -547,7 +547,7 @@ img{height:auto}
   .mobile-menu-toggle{order:initial;grid-column:2;grid-row:1;margin:0;justify-self:center}
   .header-actions{
     position:absolute;
-    right:62px;
+    right:5px;
     top:76px;
     z-index:22;
     margin:0;
@@ -603,7 +603,7 @@ img{height:auto}
   .brand img{height:40px}
   .demo-header-btn{min-height:36px;padding:0 9px;font-size:9.5px}
   .mobile-menu-toggle{min-width:40px;min-height:40px}
-  .header-actions{right:52px;top:70px}
+  .header-actions{right:5px;top:70px}
   .main-nav{top:126px;left:10px;right:10px}
   .hero-visual{padding:42px 18px 28px}
   .hero-copy h1{font-size:clamp(39px,11.5vw,50px)}
