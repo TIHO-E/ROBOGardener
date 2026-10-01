@@ -519,3 +519,91 @@ img{height:auto}
 @media(max-width:720px){
   .demo-header-btn{margin-left:auto;margin-right:8px;min-height:40px;padding:0 12px;font-size:11px}
 }
+
+/* ===== Mobile header + hero repair ===== */
+@media(max-width:720px){
+  .site-header{
+    min-height:68px;
+    padding:8px 14px;
+    gap:7px;
+    display:grid;
+    grid-template-columns:minmax(112px,1fr) auto auto;
+    align-items:center;
+  }
+  .brand{width:min(150px,100%);min-width:0}
+  .brand img{width:100%;height:44px;object-fit:contain;object-position:left center}
+  .demo-header-btn{
+    order:initial;
+    margin:0;
+    min-height:38px;
+    padding:0 12px;
+    border-radius:8px;
+    font-size:10.5px;
+    letter-spacing:0;
+  }
+  .mobile-menu-toggle{order:initial;margin:0;justify-self:end}
+  .header-actions{
+    position:absolute;
+    right:62px;
+    top:76px;
+    z-index:22;
+    margin:0;
+  }
+  .lang-switch{box-shadow:0 3px 12px rgba(17,63,39,.08)}
+  .main-nav{top:132px}
+  .hero-visual{
+    min-height:auto;
+    padding:48px 22px 34px;
+    overflow:hidden;
+  }
+  .hero-copy{
+    width:100%;
+    max-width:none;
+  }
+  .hero-copy h1{
+    font-size:clamp(42px,12vw,56px);
+    line-height:.98;
+    max-width:100%;
+    overflow-wrap:normal;
+    word-break:normal;
+  }
+  .hero-copy>p{
+    max-width:100%;
+    font-size:16px;
+    line-height:1.58;
+  }
+  .hero-actions{
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin:24px 0 0;
+  }
+  .hero-actions .btn{
+    min-width:0;
+    padding:13px 12px;
+    font-size:12px;
+    line-height:1.25;
+  }
+  .hero-trust-card{
+    position:relative;
+    left:auto;
+    right:auto;
+    bottom:auto;
+    transform:none;
+    width:100%;
+    max-width:390px;
+    margin:26px auto 0;
+  }
+}
+@media(max-width:430px){
+  .site-header{grid-template-columns:minmax(105px,1fr) auto auto;padding-left:10px;padding-right:10px}
+  .brand{width:128px}
+  .brand img{height:40px}
+  .demo-header-btn{min-height:36px;padding:0 9px;font-size:9.5px}
+  .mobile-menu-toggle{min-width:40px;min-height:40px}
+  .header-actions{right:52px;top:70px}
+  .main-nav{top:126px;left:10px;right:10px}
+  .hero-visual{padding:42px 18px 28px}
+  .hero-copy h1{font-size:clamp(39px,11.5vw,50px)}
+  .hero-actions{grid-template-columns:1fr}
+  .hero-actions .btn{font-size:13px}
+}
