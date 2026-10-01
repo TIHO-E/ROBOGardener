@@ -610,3 +610,9 @@ img{height:auto}
   .hero-actions{grid-template-columns:1fr}
   .hero-actions .btn{font-size:13px}
 }
+
+/* Align mobile process steps regardless of translation length. */
+@media(max-width:720px){
+  .steps article{width:100%;max-width:none;min-width:0;justify-self:stretch}
+  .steps article>div{min-width:0;flex:1}
+}
