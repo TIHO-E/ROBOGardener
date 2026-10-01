@@ -85,7 +85,7 @@
       if(window.turnstile&&turnstileId!==null) window.turnstile.reset(turnstileId);
     }catch(err){
       console.error('RoboGardener enquiry submission failed:',err);
-      setMessage(isChinese()?'暂时无法提交。请稍后再试，或发送邮件至 enquiries@robogardener.com.au。':'We could not submit your enquiry right now. Please try again, or email enquiries@robogardener.com.au.');
+      setMessage(isChinese()?'暂时无法提交。请稍后再试，或发送邮件至 info@robogardener.com.au。':'We could not submit your enquiry right now. Please try again, or email info@robogardener.com.au.');
       if(window.turnstile&&turnstileId!==null){turnstileToken='';window.turnstile.reset(turnstileId);}
     }finally{setLoading(false);}
   });
