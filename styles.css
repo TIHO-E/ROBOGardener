@@ -624,11 +624,11 @@ img{height:auto}
   opacity:1;filter:none;pointer-events:none;
 }
 
-/* Mobile-only promotion placement over the original logo area. */
+/* Mobile-only promotion placement over the garden sign area. */
 @media(max-width:720px){
   .hero-trust-card{display:block;top:auto}
   .hero-trust-card>img:not(.hero-promo-overlay){display:block;width:100%;height:auto}
   .hero-trust-card .hero-promo-overlay{
-    top:12%;right:5%;bottom:auto;left:auto;transform:none;width:44%;
+    top:39%;right:5%;bottom:auto;left:auto;transform:none;width:44%;
   }
 }
