@@ -634,3 +634,8 @@ img{height:auto}
     top:34%;right:5%;bottom:auto;left:auto;transform:none;width:44%;
   }
 }
+
+/* Allow the technology introduction to fit the desktop content width. */
+@media(min-width:1181px){
+  .technology .section-heading p{white-space:normal;overflow-wrap:break-word}
+}
