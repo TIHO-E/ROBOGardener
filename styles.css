@@ -616,3 +616,10 @@ img{height:auto}
   .steps article{width:100%;max-width:none;min-width:0;justify-self:stretch}
   .steps article>div{min-width:0;flex:1}
 }
+
+/* Promotion layered over the original hero artwork. */
+.hero-trust-card .hero-promo-overlay{
+  position:absolute;top:9%;right:5%;z-index:1;
+  width:44%;height:auto;border-radius:0;object-fit:contain;
+  opacity:1;filter:none;pointer-events:none;
+}
