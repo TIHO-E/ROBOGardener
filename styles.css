@@ -623,3 +623,10 @@ img{height:auto}
   width:44%;height:auto;border-radius:0;object-fit:contain;
   opacity:1;filter:none;pointer-events:none;
 }
+
+/* Keep the mobile promotion anchored to the artwork, as on desktop. */
+@media(max-width:720px){
+  .hero-trust-card{display:block;top:auto}
+  .hero-trust-card>img:not(.hero-promo-overlay){display:block;width:100%;height:auto}
+  .hero-trust-card .hero-promo-overlay{top:9%;right:5%;width:44%}
+}
