@@ -624,11 +624,13 @@ img{height:auto}
   opacity:1;filter:none;pointer-events:none;
 }
 
-/* Mobile-only promotion placement over the garden sign area. */
+/* Match the approved desktop image proportions on mobile.
+   The desktop screenshot places the visible badge at about 36% of the
+   square artwork height; the PNG's transparent top margin adds 1.9%. */
 @media(max-width:720px){
-  .hero-trust-card{display:block;top:auto}
+  .hero-trust-card{display:block;top:auto;aspect-ratio:1 / 1}
   .hero-trust-card>img:not(.hero-promo-overlay){display:block;width:100%;height:auto}
   .hero-trust-card .hero-promo-overlay{
-    top:39%;right:5%;bottom:auto;left:auto;transform:none;width:44%;
+    top:34%;right:5%;bottom:auto;left:auto;transform:none;width:44%;
   }
 }
