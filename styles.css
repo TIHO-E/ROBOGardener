@@ -619,18 +619,16 @@ img{height:auto}
 
 /* Promotion layered over the original hero artwork. */
 .hero-trust-card .hero-promo-overlay{
-  position:absolute;top:8%;right:7%;bottom:auto;left:auto;transform:none;z-index:1;
-  width:40%;height:auto;border-radius:0;object-fit:contain;
+  position:absolute;top:9%;right:5%;z-index:1;
+  width:44%;height:auto;border-radius:0;object-fit:contain;
   opacity:1;filter:none;pointer-events:none;
 }
 
-/* Keep the mobile promotion anchored to the artwork, as on desktop. */
+/* Mobile-only promotion placement over the original logo area. */
 @media(max-width:720px){
   .hero-trust-card{display:block;top:auto}
   .hero-trust-card>img:not(.hero-promo-overlay){display:block;width:100%;height:auto}
-  .hero-trust-card .hero-promo-overlay{top:8%;right:7%;width:40%}
+  .hero-trust-card .hero-promo-overlay{
+    top:12%;right:5%;bottom:auto;left:auto;transform:none;width:44%;
+  }
 }
-
-/* Use the square artwork itself as the promotion coordinate space. */
-.hero-trust-card{display:block;aspect-ratio:1 / 1}
-.hero-trust-card>img:not(.hero-promo-overlay){width:100%;height:auto;display:block}
